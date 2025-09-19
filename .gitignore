@@ -1,0 +1,20 @@
+﻿# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+# Venvs / editors / build
+.venv/
+env/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.nox/
+.cache/
+.idea/
+.vscode/
+# OS
+.DS_Store
+Thumbs.db
