@@ -35,10 +35,10 @@ def use(path: Union[str, Path], *, vars: Sequence[str] | None = None, rows: Rows
     ext = path.suffix.lower()
     if ext == ".csv":
         df = pd.read_csv(path)
-    elif ext in {".xls", ".xlsx"}:
+    elif ext == ".xlsx":
         df = pd.read_excel(path)
     else:
-        raise ValueError("Only .csv, .xls, .xlsx supported")
+        raise ValueError("Only .csv and .xlsx files are supported.")
     if vars is not None:
         missing = [c for c in vars if c not in df.columns]
         if missing:

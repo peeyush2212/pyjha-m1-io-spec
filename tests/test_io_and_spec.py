@@ -9,6 +9,7 @@ def test_use_csv(tmp_path):
     out = use(p, vars=["y", "x2"], rows="1:3", query="x2 >= 6")
     assert list(out.columns) == ["y", "x2"]
     assert out.shape == (2, 2)
+    assert out.to_dict("list") == {"y": [2, 3], "x2": [6, 7]}
 
 def test_use_excel(tmp_path):
     df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
