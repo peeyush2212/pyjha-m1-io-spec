@@ -1,3 +1,3 @@
 # pyjha
 
-Helpers for loading data and running simple models.
+Helpers for loading data and capturing simple modeling metadata.
